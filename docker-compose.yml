@@ -1,0 +1,36 @@
+version: "3.9"
+services:
+  py3:
+    build:
+      image: kehukehu0424/lyon-env:2.0-full
+      context: ./py3
+      dockerfile: Dockerfile
+    # メモリのサイズを変える
+    shm_size: '8gb'
+    entrypoint: >
+      jupyter-lab
+      --allow-root
+      --ip=0.0.0.0
+      --port=8888
+      --no-browser
+      --notebook-dir=/workspace
+    expose:
+      - "8888"
+    #ここの左のポート番号を好きな値に設定 
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./py3/root_jupyter:/root/.jupyter
+      - ./workspace:/workspace
+
+    #GPUを使う場合の設定
+    environment:
+      - "NVIDIA_VISIBLE_DEVICES=all"
+      - "NVIDIA_DRIVER_CAPABILITIES=all"
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            device_ids: ['0']
+            capabilities: [gpu]
