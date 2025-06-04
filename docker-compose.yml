@@ -1,10 +1,7 @@
 version: "3.9"
 services:
   py3:
-    build:
-      image: kehukehu0424/lyon-env:2.0-full
-      context: ./py3
-      dockerfile: Dockerfile
+    image: kehukehu0424/lyon-env:2.0-full
     # メモリのサイズを変える
     shm_size: '8gb'
     entrypoint: >
