@@ -135,5 +135,5 @@ docker-compose up -d
 作成情報を列挙する
 
 * 作成者：Amembo1219
-* E-mail g212403591@edu.teu.ac.jp
+* E-mail： g212403591@edu.teu.ac.jp
 
