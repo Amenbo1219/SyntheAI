@@ -1,30 +1,26 @@
-# Lyon-env　version:2.0.a
+# SyntheAI：PyTorch & TensorFlow Unified Development Environment（旧：Lyon-env）　version:2.0.a
+TensorflowとPyTorchを誰でも簡単に利用できるように開発された，Nootebook形式のAI開発・研究環境です．
 
-東京工科大学CS学部人工知能サーバーLyonにJupyterLabを利用したディープラーニングの学習環境を構築するDocker-Composeファイルとその他システムファイルになります。
-イメージ自体はNvidia-Dockerが動作する環境であれば、Linuxでも動作いたします。
-
-[Lyon公式ページ](https://sites.google.com/edu.teu.ac.jp/cscloud)
+# 名称変更のお知らせ
+利用者の拡大・外部サービスでの利用拡大の背景から名前をLyonに限定せず，利用できるように新たにSyntheAI(略称SAI)に変更しました．
+色々な所属の方に使っていただき開発者として非常に誇らしいです！
 
 # Requirement
 
 * GPUサーバー環境（SSH接続でのログインを想定）
-* Dockerシステムの環境構築済みであること
+* Dockerシステムの環境構築済みであること(nvidia-Dockerの環境構築が住んでいること)
 * DockerCompose環境
-
-[LyonにDockerを設定する｜ LyonクラウドVMの操作](https://sites.google.com/edu.teu.ac.jp/cscloud#h.89lswy9teuzt)
-
-[LyonにDockerComposeをインストールする｜準備（はじめに）](https://power-banana-14a.notion.site/Lyon-JupyerLab-20230428-c4e3134fe8174bf3b6310cdd286d3a2b)
 
 
 # Installation
 
 GitHubからシステムを取得する
 ```bash
-git clone https://github.com/Amenbo1219/Lyon-env.git
+git clone https://github.com/Amenbo1219/SyntheAI.git
 ```
-Lyon-Envのディレクトリに移動する
+SyntheAIのディレクトリに移動する
 ```bash
-cd Lyon-env
+cd syntheai
 ```
 Docker-compose をビルドする
 ```bash
@@ -129,11 +125,15 @@ docker-compose up -d
 ## 2024-10-05　Version2.0.a-release
 * Dockerfileの一部を修正しました
 * README.mdを更新しました．
+## 2025-07-29　Version2.0.a-release
+* レポジトリの変更
+* README.mdを更新しました．
+
+
 # Author
 
 作成情報を列挙する
 
 * 作成者：Amembo1219
-* 所属：Faculty of Computer Science, Tokyo University of Technology 
 * E-mail g212403591@edu.teu.ac.jp
 
