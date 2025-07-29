@@ -30,7 +30,7 @@ docker-compose build --no-cahce
 ```bash
 docker-compose up -d
 ```
-ブラウザから http://接続したホスト名:9999 にログインする
+ブラウザから http://接続したホスト名:8888 にログインする
 
 # Note
 
