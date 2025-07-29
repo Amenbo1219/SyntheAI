@@ -20,7 +20,7 @@ git clone https://github.com/Amenbo1219/SyntheAI.git
 ```
 SyntheAIのディレクトリに移動する
 ```bash
-cd syntheai
+cd SyntheAI
 ```
 Docker-compose をビルドする
 ```bash
