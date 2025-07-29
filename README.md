@@ -1,4 +1,4 @@
-# SyntheAI：PyTorch & TensorFlow Unified Development Environment（旧：Lyon-env）　version:2.0.a
+# SyntheAI：PyTorch & TensorFlow Unified Development Environment（旧：Lyon-env）　version:2.0.b
 TensorflowとPyTorchを誰でも簡単に利用できるように開発された，Nootebook形式のAI開発・研究環境です．
 
 # 名称変更のお知らせ
@@ -30,7 +30,7 @@ docker-compose build --no-cahce
 ```bash
 docker-compose up -d
 ```
-ブラウザから http://接続したホスト名:8888 にログインする
+ブラウザから http://ホスト名:8888 にログインする
 
 # Note
 
@@ -125,7 +125,7 @@ docker-compose up -d
 ## 2024-10-05　Version2.0.a-release
 * Dockerfileの一部を修正しました
 * README.mdを更新しました．
-## 2025-07-29　Version2.0.a-release
+## 2025-07-29　Version2.0.b-release
 * レポジトリの変更
 * README.mdを更新しました．
 
