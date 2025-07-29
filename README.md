@@ -8,7 +8,7 @@ TensorflowとPyTorchを誰でも簡単に利用できるように開発された
 # Requirement
 
 * GPUサーバー環境（SSH接続でのログインを想定）
-* Dockerシステムの環境構築済みであること(nvidia-Dockerの環境構築が住んでいること)
+* Dockerシステムの環境構築済みであること(nvidia-Dockerの環境構築が済んでいること)
 * DockerCompose環境
 
 
