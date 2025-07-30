@@ -10,6 +10,7 @@ TensorflowとPyTorchを誰でも簡単に利用できるように開発された
 * GPUサーバー環境（SSH接続でのログインを想定）
 * Dockerシステムの環境構築済みであること(nvidia-Dockerの環境構築が済んでいること)
 * DockerCompose環境
+* vGPU利用化での利用を想定(通常環境の方はNoteを参照してください．)
 
 
 # Installation
@@ -46,6 +47,10 @@ docker-compose up -d
 * ポート番号の変更・GPUメモリの割当量を変更したい
 
      [docker-compose.yml](docker-compose.yml)を変更する。
+
+* VGPUを用いていない環境(通常の環境)で利用したい
+
+     [docker-compose.yml](docker-compose.yml)の#GPUを使う場合の設定以下4行(environment)をコメントアウトしてください
 * JupyterのTokenを確認したい
 
      イメージビルド中にLogを確認し、LogからTokenを探す
