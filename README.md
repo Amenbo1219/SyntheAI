@@ -142,7 +142,7 @@ This repository is licensed under the MIT License, with the following **addition
 * レポジトリの変更
 * README.mdを更新しました．
 
-## 2025-07-90　Version2.0.a-release
+## 2025-07-90　Version2.1.a-release
 * [重要]本レポジトリの権利を保証するため，ライセンスを設けました．詳細はLICENSEを御覧ください．
 * ディープラーニング学習中に利用者が途中でブラウザを閉じてもプログラムが終了しないように設定を変更しました．
 * README.mdを更新しました．
