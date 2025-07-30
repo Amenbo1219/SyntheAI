@@ -1,4 +1,4 @@
-# SyntheAI：PyTorch & TensorFlow Unified Development Environment（旧：Lyon-env）　version:2.0.b
+# SyntheAI：PyTorch & TensorFlow Unified Development Environment（旧：Lyon-env）　version:2.0.c
 TensorflowとPyTorchを誰でも簡単に利用できるように開発された，Nootebook形式のAI開発・研究環境です．
 
 # 名称変更のお知らせ
@@ -86,11 +86,24 @@ docker-compose up -d
 
     * [Cudaを使う場合|DockerHub](https://hub.docker.com/r/nvidia/cuda/tags)
 
-    * [LyonにDockerComposeをインストールする｜特定環境を使う場合](https://sites.google.com/edu.teu.ac.jp/cscloud#h.d6y8bo3ee6h1)
-
 * Tensorflowのイメージには何が含まれていますか？
 
      [テスト済みのビルド構成|Tensorflow](https://www.tensorflow.org/install/source?hl=ja#gpu)
+
+# License
+本リポジトリは、MITライセンスに基づいて提供されますが、以下の**追加利用規約**が適用されます。  
+This repository is licensed under the MIT License, with the following **additional terms**.
+
+## 追加条項 / Additional Terms
+
+- 作成者の**事前許諾なしに**、本リポジトリに含まれるコードやデータの**再配布・公開（二次利用を含む）を禁止**します。  
+  Redistribution or publication (modified or unmodified) is **prohibited without prior written permission** from the author.
+
+- 作成者の許諾を得ている場合でも、**公開停止や使用中止の要請があった際は速やかに従ってください**。  
+  Even with permission, **you must promptly cease redistribution if requested by the author**.
+
+- 本追加条項は **2025年7月30日** より効力を発し、**それ以前の再配布については適用されません（遡及適用なし）**。  
+  These terms take effect from **July 30, 2025**, and **do not apply retroactively** to redistribution before this date.
 
 # ReleaseNote
 ## 2023-05-22　Version1.0-release
@@ -129,11 +142,14 @@ docker-compose up -d
 * レポジトリの変更
 * README.mdを更新しました．
 
+## 2025-07-90　Version2.0.c-release
+* [重要]本レポジトリの権利を保証するため，ライセンスを設けました．詳細はLICENSEを御覧ください．
+* README.mdを更新しました．
+
 
 # Author
 
 作成情報を列挙する
 
 * 作成者：Amembo1219
-* E-mail： g212403591@edu.teu.ac.jp
-
+* E-mail： butabasuko@gmail.com
