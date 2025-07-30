@@ -44,11 +44,11 @@ docker-compose up -d
 
      [py3/Dockerfile](py3/Dockerfile)に追加したいモジュールを追加する。
 
-* ポート番号の変更・GPUメモリの割当量を変更したい
+* ポート番号の変更・GPUメモリの割当量・GPUのID指定を変更したい
 
      [docker-compose.yml](docker-compose.yml)を変更する。
 
-* VGPUを用いていない環境(通常の環境)で利用したい
+* vGPUを用いていない環境(通常の環境)で利用したい
 
      [docker-compose.yml](docker-compose.yml)の#GPUを使う場合の設定以下4行(environment)をコメントアウトしてください
 * JupyterのTokenを確認したい
