@@ -95,6 +95,28 @@ docker-compose up -d
 
      [テスト済みのビルド構成|Tensorflow](https://www.tensorflow.org/install/source?hl=ja#gpu)
 
+# 類似するレポジトリ
+
+本プロジェクトと類似した機能を持つDocker/Jupyter環境のリポジトリを紹介します。
+
+* [Jupyter Docker Stacks](https://github.com/jupyter/docker-stacks)
+    * Jupyter公式のDockerイメージ集。科学計算、機械学習、データサイエンス向けの様々なスタックを提供しています。
+
+* [Coder](https://github.com/coder/coder)
+    * クラウドベースの開発環境プラットフォーム。複数のユーザーで共有可能なワークスペースを提供します。
+
+* [ML Workspace](https://github.com/ml-tooling/ml-workspace)
+    * オールインワンのWebベース機械学習開発環境。Jupyter、VS Code、TensorBoard等を統合しています。
+
+* [fastai/docker-containers](https://github.com/fastai/docker-containers)
+    * fast.aiライブラリに最適化されたDockerコンテナ環境です。
+
+* [NVIDIA NGC Containers](https://catalog.ngc.nvidia.com/containers)
+    * NVIDIA公式のGPU最適化済みコンテナ。TensorFlow、PyTorch、RAPIDSなどが用意されています。
+
+* [Deep Learning Container Images](https://github.com/aws/deep-learning-containers)
+    * AWS提供のディープラーニング向けDockerイメージ集です。
+
 # License
 本リポジトリは、MITライセンスに基づいて提供されますが、以下の**追加利用規約**が適用されます。  
 This repository is licensed under the MIT License, with the following **additional terms**.
