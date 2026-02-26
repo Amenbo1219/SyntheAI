@@ -34,6 +34,8 @@ argon2-cffi-bindings==25.1.0
     # via argon2-cffi
 arrow==1.4.0
     # via isoduration
+astroid==4.0.4
+    # via pylint
 asttokens==3.0.1
     # via stack-data
 async-lru==2.2.0
@@ -42,10 +44,16 @@ attrs==25.4.0
     # via
     #   jsonschema
     #   referencing
+autopep8==2.0.4
+    # via python-lsp-server
 babel==2.18.0
     # via jupyterlab-server
+bash-kernel==0.10.0
+    # via -r requirements.in
 beautifulsoup4==4.14.3
     # via nbconvert
+black==26.1.0
+    # via python-lsp-server
 bleach==6.3.0
     # via
     #   kaggle
@@ -59,7 +67,7 @@ bottleneck==1.6.0
     # via -r requirements.in
 catboost==1.2.10
     # via -r requirements.in
-certifi==2026.1.4
+certifi==2026.2.25
     # via
     #   httpcore
     #   httpx
@@ -75,6 +83,7 @@ chex==0.1.86
     # via optax
 click==8.3.1
     # via
+    #   black
     #   nltk
     #   typer
     #   wandb
@@ -112,6 +121,10 @@ defusedxml==0.7.1
     # via nbconvert
 diffusers==0.36.0
     # via -r requirements.in
+dill==0.4.1
+    # via pylint
+docstring-to-markdown==0.17
+    # via python-lsp-server
 einops==0.8.2
     # via
     #   -r requirements.in
@@ -132,6 +145,10 @@ filelock==3.24.3
     #   tldextract
     #   torch
     #   triton
+filetype==1.2.0
+    # via bash-kernel
+flake8==7.1.2
+    # via python-lsp-server
 flatbuffers==25.12.19
     # via onnxruntime-gpu
 flax==0.8.4
@@ -202,7 +219,7 @@ h5netcdf==1.8.1
     # via -r requirements.in
 h5py==3.15.1
     # via -r requirements.in
-hf-xet==1.2.0
+hf-xet==1.3.1
     # via huggingface-hub
 holoviews==1.22.1
     # via -r requirements.in
@@ -248,6 +265,7 @@ importlib-metadata==8.7.1
     # via
     #   controlnet-aux
     #   diffusers
+    #   docstring-to-markdown
 importlib-resources==6.5.2
     # via
     #   etils
@@ -257,6 +275,7 @@ imutils==0.5.4
 ipykernel==7.2.0
     # via
     #   -r requirements.in
+    #   bash-kernel
     #   jupyterlab
 ipython==9.10.0
     # via
@@ -273,6 +292,8 @@ ipywidgets==8.1.8
     # via -r requirements.in
 isoduration==20.11.0
     # via jsonschema
+isort==8.0.0
+    # via pylint
 japanize-matplotlib==1.1.3
     # via -r requirements.in
 jax==0.4.23
@@ -290,7 +311,9 @@ jaxlib==0.4.23+cuda11.cudnn86
     #   optax
     #   orbax-checkpoint
 jedi==0.19.2
-    # via ipython
+    # via
+    #   ipython
+    #   python-lsp-server
 jinja2==3.1.6
     # via
     #   bokeh
@@ -333,7 +356,9 @@ jupyter-core==5.9.1
 jupyter-events==0.12.0
     # via jupyter-server
 jupyter-lsp==2.3.0
-    # via jupyterlab
+    # via
+    #   jupyterlab
+    #   jupyterlab-lsp
 jupyter-server==2.17.0
     # via
     #   jupyter-lsp
@@ -342,7 +367,11 @@ jupyter-server==2.17.0
     #   notebook-shim
 jupyter-server-terminals==0.5.4
     # via jupyter-server
-jupyterlab==4.5.4
+jupyterlab==4.5.5
+    # via
+    #   -r requirements.in
+    #   jupyterlab-lsp
+jupyterlab-lsp==5.2.0
     # via -r requirements.in
 jupyterlab-pygments==0.3.0
     # via nbconvert
@@ -397,6 +426,11 @@ matplotlib-inline==0.2.1
     # via
     #   ipykernel
     #   ipython
+mccabe==0.7.0
+    # via
+    #   flake8
+    #   pylint
+    #   python-lsp-server
 mdit-py-plugins==0.5.0
     # via panel
 mdurl==0.1.2
@@ -420,7 +454,9 @@ msgpack==1.1.2
     # via
     #   flax
     #   orbax-checkpoint
-narwhals==2.16.0
+mypy-extensions==1.1.0
+    # via black
+narwhals==2.17.0
     # via
     #   bokeh
     #   holoviews
@@ -447,7 +483,7 @@ networkx==3.6.1
     #   torch
 nibabel==5.3.3
     # via -r requirements.in
-nltk==3.9.2
+nltk==3.9.3
     # via -r requirements.in
 notebook-shim==0.2.4
     # via jupyterlab
@@ -574,6 +610,7 @@ overrides==7.7.0
 packaging==26.0
     # via
     #   accelerate
+    #   black
     #   bokeh
     #   db-dtypes
     #   google-cloud-bigquery
@@ -596,6 +633,7 @@ packaging==26.0
     #   panel
     #   peft
     #   plotly
+    #   pytoolconfig
     #   scikit-image
     #   statsmodels
     #   transformers
@@ -631,12 +669,16 @@ parso==0.8.6
     # via jedi
 pathlib==1.0.1
     # via -r requirements.in
+pathspec==1.0.4
+    # via black
 patsy==1.0.2
     # via statsmodels
 peft==0.18.1
     # via -r requirements.in
 pexpect==4.9.0
-    # via ipython
+    # via
+    #   bash-kernel
+    #   ipython
 pillow==11.3.0
     # via
     #   bokeh
@@ -649,12 +691,18 @@ pillow==11.3.0
     #   torchvision
 platformdirs==4.9.2
     # via
+    #   black
     #   jupyter-core
+    #   pylint
+    #   pytoolconfig
     #   wandb
+    #   yapf
 plotly==6.5.2
     # via
     #   -r requirements.in
     #   catboost
+pluggy==1.6.0
+    # via python-lsp-server
 polars==1.38.1
     # via -r requirements.in
 polars-runtime-32==1.38.1
@@ -706,6 +754,11 @@ pyasn1==0.6.2
     #   rsa
 pyasn1-modules==0.4.2
     # via google-auth
+pycodestyle==2.12.1
+    # via
+    #   autopep8
+    #   flake8
+    #   python-lsp-server
 pycparser==3.0
     # via cffi
 pydantic==2.12.5
@@ -714,12 +767,20 @@ pydantic-core==2.41.5
     # via pydantic
 pydata-google-auth==1.9.1
     # via pandas-gbq
+pydocstyle==6.3.0
+    # via python-lsp-server
+pyflakes==3.2.0
+    # via
+    #   flake8
+    #   python-lsp-server
 pygments==2.19.2
     # via
     #   ipython
     #   ipython-pygments-lexers
     #   nbconvert
     #   rich
+pylint==4.0.5
+    # via python-lsp-server
 pyparsing==3.3.2
     # via matplotlib
 python-dateutil==2.9.0.post0
@@ -735,10 +796,18 @@ python-dotenv==1.2.1
     # via moviepy
 python-json-logger==4.0.0
     # via jupyter-events
+python-lsp-jsonrpc==1.1.2
+    # via python-lsp-server
+python-lsp-server==1.14.0
+    # via -r requirements.in
 python-slugify==8.0.4
     # via
     #   -r requirements.in
     #   kaggle
+pytokens==0.4.1
+    # via black
+pytoolconfig==1.3.1
+    # via rope
 pytz==2025.2
     # via pandas
 pyviz-comms==3.0.6
@@ -810,6 +879,8 @@ rich==14.3.3
     #   -r requirements.in
     #   flax
     #   typer
+rope==1.14.0
+    # via python-lsp-server
 rpds-py==0.30.0
     # via
     #   jsonschema
@@ -833,7 +904,7 @@ scikit-learn==1.8.0
     #   -r requirements.in
     #   mlxtend
     #   sklearn-pandas
-scipy==1.17.0
+scipy==1.17.1
     # via
     #   -r requirements.in
     #   catboost
@@ -877,9 +948,11 @@ sklearn-pandas==2.2.0
     # via -r requirements.in
 smmap==5.0.2
     # via gitdb
+snowballstemmer==3.0.1
+    # via pydocstyle
 soupsieve==2.8.3
     # via beautifulsoup4
-sqlalchemy==2.0.46
+sqlalchemy==2.0.47
     # via
     #   alembic
     #   ipython-sql
@@ -906,9 +979,9 @@ text-unidecode==1.3
     # via python-slugify
 threadpoolctl==3.6.0
     # via scikit-learn
-tifffile==2026.2.20
+tifffile==2026.2.24
     # via scikit-image
-timm==1.0.24
+timm==1.0.25
     # via controlnet-aux
 tinycss2==1.4.0
     # via bleach
@@ -916,6 +989,8 @@ tldextract==5.3.1
     # via -r requirements.in
 tokenizers==0.22.2
     # via transformers
+tomlkit==0.14.0
+    # via pylint
 toolz==1.1.0
     # via chex
 torch==2.4.0+cu118
@@ -977,7 +1052,7 @@ triton==3.0.0
     # via
     #   -r requirements.in
     #   torch
-typer==0.24.0
+typer==0.24.1
     # via typer-slim
 typer-slim==0.24.0
     # via
@@ -989,6 +1064,7 @@ typing-extensions==4.15.0
     #   anyio
     #   beautifulsoup4
     #   chex
+    #   docstring-to-markdown
     #   etils
     #   flax
     #   grpcio
@@ -1012,6 +1088,10 @@ tzdata==2025.3
     #   pandas
 uc-micro-py==1.0.3
     # via linkify-it-py
+ujson==5.11.0
+    # via
+    #   python-lsp-jsonrpc
+    #   python-lsp-server
 uri-template==1.3.0
     # via jsonschema
 urllib3==2.6.3
@@ -1035,6 +1115,8 @@ webencodings==0.5.1
     #   tinycss2
 websocket-client==1.9.0
     # via jupyter-server
+whatthepatch==1.0.7
+    # via python-lsp-server
 widgetsnbextension==4.0.15
     # via ipywidgets
 xformers==0.0.27.post2+cu118
@@ -1043,6 +1125,8 @@ xgboost==1.7.6
     # via -r requirements.in
 xyzservices==2025.11.0
     # via bokeh
+yapf==0.43.0
+    # via python-lsp-server
 zipp==3.23.0
     # via
     #   etils

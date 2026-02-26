@@ -23,9 +23,9 @@ services:
       - ./workspace:/workspace
 
     # Setting for vGPU (Disabled in normal GPU Environments)
-    environment:
-      - "NVIDIA_VISIBLE_DEVICES=all"
-      - "NVIDIA_DRIVER_CAPABILITIES=all"
+    #environment:
+    #  - "NVIDIA_VISIBLE_DEVICES=all"
+    #  - "NVIDIA_DRIVER_CAPABILITIES=all"
     # Hard-coded GPU IDs to ensure compatibility with local hardware setup
     deploy:
       resources:

@@ -66,13 +66,13 @@ fi
 cd "$ROOT_DIR"
 
 cat <<EOF > "$LOG_FILE"
-# 📦 Library Update Report
+# Library Update Report
 
-## 🛰️ 検証環境
+## 検証環境
 - **GPU**: $GPU_NAME 
 - **最終更新日時**: $DATE
 
-## 🚀 アップデート詳細
+## アップデート詳細
 今回の実行で以下のパッケージ構成が変更されました。
 
 \`\`\`text

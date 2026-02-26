@@ -57,7 +57,9 @@ docker run --rm --gpus all \
       --unsafe-package nvidia-nccl-cu12 \
       --unsafe-package nvidia-nvtx-cu12 \
       requirements.in --output-file requirements.txt
-    pip install -r requirements.txt
+    uv pip install --system --no-cache \
+    --index-strategy unsafe-best-match \
+    -r requirements.txt
     echo '--- 3.2 Testing Frameworks ---'
     python3 -c 'import torch; import tensorflow as tf; import jax; \
       assert torch.cuda.is_available(); \
@@ -67,5 +69,4 @@ docker run --rm --gpus all \
 "
 
 echo "--- 4. Finalizing ---"
-echo "Diff check:"
 diff -u "$TARGET_DIR_NAME/requirements.txt.bak" "$TARGET_DIR_NAME/requirements.txt" || true

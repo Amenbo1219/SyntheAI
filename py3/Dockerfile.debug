@@ -1,8 +1,10 @@
+FROM ghcr.io/astral-sh/uv:latest AS uv_bin
 FROM tensorflow/tensorflow:2.15.0.post1-gpu
 # TimeZone　Setup
 ENV TZ=Asia/Tokyo
 ENV DEBIAN_FRONTEND=noninteractive
-
+# Copy uv binary
+COPY --from=uv_bin /uv /uvx /bin/
 # Base Environment Setup
 RUN apt-get update && apt-get install -y \
     tzdata \

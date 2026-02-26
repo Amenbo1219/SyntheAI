@@ -89,6 +89,9 @@ holoviews
 matplotlib
 seaborn
 plotly
+jupyterlab-lsp
+python-lsp-server[all]
+bash-kernel
 
 # --- Data Acquisition & APIs ---
 pandas-gbq
